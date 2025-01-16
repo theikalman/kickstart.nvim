@@ -111,12 +111,14 @@ vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the uppe
 -- Split windows with <leader>
 vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = 'Split window vertically' })
 vim.keymap.set('n', '<leader>ws', '<C-w>s', { desc = 'Split window horizontally' })
-vim.keymap.set('n', '<leader>wq', ':wq<CR>', { desc = 'Save & quit current window' })
+vim.keymap.set('n', '<leader>wq', ':q<CR>', { desc = 'Quit current window' })
 vim.keymap.set('n', '<leader>wQ', ':qa!<CR>', { desc = 'Quit all windows without saving' })
 
 -- File operations
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
 vim.keymap.set('n', '<leader>fS', ':wa<CR>', { desc = 'File save all buffer' })
+
+vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = 'Open [L]azyvim' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -245,7 +247,7 @@ require('lazy').setup({
       -- Document existing key chains
       spec = {
         { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-        { '<leader>d', group = '[D]ocument' },
+        { '<leader>d', group = 'Debug' },
         { '<leader>f', group = '[F]ile' },
         { '<leader>g', group = '[G]it' },
         { '<leader>gh', group = '[G]it [H]unk', mode = { 'n', 'v' } },
@@ -460,11 +462,11 @@ require('lazy').setup({
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
           --  the definition of its *type*, not where it was *defined*.
-          map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+          -- map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
-          map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+          -- map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
