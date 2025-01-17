@@ -5,7 +5,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       -- Enabling this linter (markdownlint) require `:MasonInstall markdownlint`
-      -- local lint = require 'lint'
+      local lint = require 'lint'
       -- lint.linters_by_ft = {
       --   markdown = { 'markdownlint' },
       -- }
