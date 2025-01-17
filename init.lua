@@ -124,6 +124,9 @@ vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Smaller window vertically'
 vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Bigger window horizontally' })
 vim.keymap.set('n', '<leader>w<', '<C-w>>', { desc = 'Smaller window horizontally' })
 
+-- Window tab
+vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
+
 -- File operations
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
 vim.keymap.set('n', '<leader>fS', ':wa<CR>', { desc = 'File save all buffer' })
@@ -264,6 +267,7 @@ require('lazy').setup({
         { '<leader>r', group = 'Rename' },
         { '<leader>s', group = 'Search' },
         { '<leader>w', group = 'Windows' },
+        { '<leader>wt', group = 'Windows Tab' },
         { '<leader>p', group = 'Database Persistent' },
         { '<leader>t', group = 'Toggle' },
       },
