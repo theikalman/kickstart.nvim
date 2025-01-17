@@ -122,7 +122,7 @@ vim.keymap.set('n', '<leader>w=', '<C-w>=', { desc = 'Set window equal size' })
 vim.keymap.set('n', '<leader>w+', '<C-w>+', { desc = 'Bigger window vertically' })
 vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Smaller window vertically' })
 vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Bigger window horizontally' })
-vim.keymap.set('n', '<leader>w<', '<C-w>>', { desc = 'Smaller window horizontally' })
+vim.keymap.set('n', '<leader>w<', '<C-w><', { desc = 'Smaller window horizontally' })
 
 -- Window tab
 vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
