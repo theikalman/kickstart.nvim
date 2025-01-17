@@ -10,6 +10,13 @@ return {
     'DBUIAddConnection',
     'DBUIFindBuffer',
   },
+  keys = {
+    {
+      '<leader>pt',
+      ':DBUIToggle<CR>',
+      desc = 'Toggle Persistent UI',
+    },
+  },
   init = function()
     -- Your DBUI configuration
     vim.g.db_ui_use_nerd_fonts = 1
