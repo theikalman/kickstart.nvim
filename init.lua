@@ -117,6 +117,13 @@ vim.keymap.set('n', '<leader>ws', '<C-w>s', { desc = 'Split window horizontally'
 vim.keymap.set('n', '<leader>wq', ':q<CR>', { desc = 'Quit current window' })
 vim.keymap.set('n', '<leader>wQ', ':qa!<CR>', { desc = 'Quit all windows without saving' })
 
+-- Resize windows with <leader>
+vim.keymap.set('n', '<leader>w=', '<C-w>=', { desc = 'Set window equal size' })
+vim.keymap.set('n', '<leader>w+', '<C-w>+', { desc = 'Bigger window vertically' })
+vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Smaller window vertically' })
+vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Bigger window horizontally' })
+vim.keymap.set('n', '<leader>w<', '<C-w>>', { desc = 'Smaller window horizontally' })
+
 -- File operations
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
 vim.keymap.set('n', '<leader>fS', ':wa<CR>', { desc = 'File save all buffer' })
