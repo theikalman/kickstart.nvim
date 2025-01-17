@@ -121,7 +121,7 @@ vim.keymap.set('n', '<leader>wQ', ':qa!<CR>', { desc = 'Quit all windows without
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
 vim.keymap.set('n', '<leader>fS', ':wa<CR>', { desc = 'File save all buffer' })
 
-vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = 'Open [L]azyvim' })
+vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = 'Lazyvim Open' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
