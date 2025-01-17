@@ -119,10 +119,10 @@ vim.keymap.set('n', '<leader>wQ', ':qa!<CR>', { desc = 'Quit all windows without
 
 -- Resize windows with <leader>
 vim.keymap.set('n', '<leader>w=', '<C-w>=', { desc = 'Set window equal size' })
-vim.keymap.set('n', '<leader>w+', '<C-w>+', { desc = 'Bigger window vertically' })
-vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Smaller window vertically' })
-vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Bigger window horizontally' })
-vim.keymap.set('n', '<leader>w<', '<C-w><', { desc = 'Smaller window horizontally' })
+vim.keymap.set('n', '<leader>w+', '5<C-w>+', { desc = 'Bigger window vertically' })
+vim.keymap.set('n', '<leader>w-', '5<C-w>-', { desc = 'Smaller window vertically' })
+vim.keymap.set('n', '<leader>w>', '15<C-w>>', { desc = 'Bigger window horizontally' })
+vim.keymap.set('n', '<leader>w<', '15<C-w><', { desc = 'Smaller window horizontally' })
 
 -- Window tab
 vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
