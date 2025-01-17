@@ -257,7 +257,7 @@ require('lazy').setup({
         { '<leader>r', group = 'Rename' },
         { '<leader>s', group = 'Search' },
         { '<leader>w', group = 'Windows' },
-        { '<leader>p', group = 'Persistent' },
+        { '<leader>p', group = 'Database Persistent' },
         { '<leader>t', group = 'Toggle' },
       },
     },
