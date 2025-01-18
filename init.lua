@@ -73,6 +73,9 @@ vim.opt.scrolloff = 5
 -- Turn off line wrapping
 vim.wo.wrap = false
 
+-- Set tabstop to use spaces instead of tab
+vim.opt.tabstop = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
