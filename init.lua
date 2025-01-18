@@ -68,7 +68,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
 -- Turn off line wrapping
 vim.wo.wrap = false
@@ -129,6 +129,24 @@ vim.keymap.set('n', '<leader>w<', '15<C-w><', { desc = 'Smaller window horizonta
 -- Window tab
 vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
 vim.keymap.set('n', '<leader>wtt', '<C-w>T', { desc = 'Open in new tab' })
+
+-- Buffer operations
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = 'Buffer delete' })
+vim.keymap.set('n', '<leader>bo', function()
+  -- Get the current buffer
+  local current_buf = vim.api.nvim_get_current_buf()
+
+  -- Get a list of all buffers
+  local buffers = vim.api.nvim_list_bufs()
+
+  for _, buf in ipairs(buffers) do
+    -- Check if the buffer is loaded and not the current buffer
+    if buf ~= current_buf and vim.api.nvim_buf_is_loaded(buf) then
+      -- Delete the buffer
+      vim.api.nvim_buf_delete(buf, { force = true })
+    end
+  end
+end, { desc = 'Delete all buffers except me' })
 
 -- File operations
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
