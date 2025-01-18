@@ -126,6 +126,7 @@ vim.keymap.set('n', '<leader>w<', '15<C-w><', { desc = 'Smaller window horizonta
 
 -- Window tab
 vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
+vim.keymap.set('n', '<leader>wtt', '<C-w>T', { desc = 'Open in new tab' })
 
 -- File operations
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'File save current buffer' })
