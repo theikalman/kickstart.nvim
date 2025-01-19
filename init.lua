@@ -956,24 +956,28 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
-      textobjects = {
-        move = {
-          enable = true,
-          set_jumps = true, -- Enables jump list tracking
-          goto_next_start = {
-            [']f'] = '@function.outer', -- Jump to next function start
+      setup = function()
+        require('nvim-treesitter.configs').setup {
+          textobjects = {
+            move = {
+              enable = true,
+              set_jumps = true, -- Enables jump list tracking
+              goto_next_start = {
+                [']f'] = '@function.outer', -- Jump to next function start
+              },
+              goto_next_end = {
+                [']F'] = '@function.outer', -- Jump to next function end
+              },
+              goto_previous_start = {
+                ['[f'] = '@function.outer', -- Jump to previous function start
+              },
+              goto_previous_end = {
+                ['[F'] = '@function.outer', -- Jump to previous function end
+              },
+            },
           },
-          goto_next_end = {
-            [']F'] = '@function.outer', -- Jump to next function end
-          },
-          goto_previous_start = {
-            ['[f'] = '@function.outer', -- Jump to previous function start
-          },
-          goto_previous_end = {
-            ['[F'] = '@function.outer', -- Jump to previous function end
-          },
-        },
-      },
+        }
+      end,
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
