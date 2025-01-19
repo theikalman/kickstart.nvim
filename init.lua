@@ -893,16 +893,31 @@ require('lazy').setup({
         'c',
         'diff',
         'go',
+        'gomod',
+        'gosum',
+        'gotmpl',
+        'gowork',
         'html',
+        'javascript',
+        'jsdoc',
+        'json',
+        'jsonc',
         'lua',
         'luadoc',
+        'luap',
         'markdown',
         'markdown_inline',
+        'php',
+        'proto',
         'python',
         'query',
         'sql',
+        'toml',
+        'typescript',
         'vim',
         'vimdoc',
+        'xml',
+        'yaml',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
@@ -921,6 +936,9 @@ require('lazy').setup({
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
   },
   {
     -- A Neovim plugin for setting the commentstring option based on the cursor location in the file.
