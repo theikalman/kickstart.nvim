@@ -527,7 +527,7 @@ require('lazy').setup({
           )
           -- Jump to previous function or method
           map(
-            ']f',
+            '[f',
             require('telescope.builtin').lsp_document_symbols {
               symbols = { 'function', 'method' },
               jump_type = 'prev',
