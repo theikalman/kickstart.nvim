@@ -517,23 +517,20 @@ require('lazy').setup({
           map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
           -- Jump to next function or method
-          map(
-            ']f',
+          vim.keymap.set('n', ']f', function()
             require('telescope.builtin').lsp_document_symbols {
               symbols = { 'function', 'method' },
               jump_type = 'next',
-            },
-            'Next function'
-          )
+            }
+          end, { desc = 'Next function' })
+
           -- Jump to previous function or method
-          map(
-            '[f',
+          vim.keymap.set('n', '[f', function()
             require('telescope.builtin').lsp_document_symbols {
               symbols = { 'function', 'method' },
               jump_type = 'prev',
-            },
-            'Previous function'
-          )
+            }
+          end, { desc = 'Previous function' })
 
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
