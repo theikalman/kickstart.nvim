@@ -972,6 +972,13 @@ require('lazy').setup({
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+
+    config = function(_, opts)
+      if type(opts.ensure_installed) == 'table' then
+        opts.ensure_installed = LazyVim.dedup(opts.ensure_installed)
+      end
+      require('nvim-treesitter.configs').setup(opts)
+    end,
   },
   {
     -- A Neovim plugin for setting the commentstring option based on the cursor location in the file.
