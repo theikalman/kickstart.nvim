@@ -838,8 +838,18 @@ require('lazy').setup({
     name = 'catppuccin',
     priority = 1000,
     init = function()
+      -- valid values are: catppuccin-latte catppuccin-frappe catppuccin-macchiato catppuccin-mocha
       vim.cmd.colorscheme 'catppuccin-macchiato'
       vim.cmd.hi 'Comment gui=none'
+    end,
+    config = function()
+      local catpuccin = require 'catppuccin'
+      catpuccin.setup {
+        background = {
+          light = 'latte',
+          dark = 'macchiato',
+        },
+      }
     end,
   },
 
