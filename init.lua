@@ -291,6 +291,7 @@ require('lazy').setup({
         { '<leader>gh', group = 'Git Hunk', mode = { 'n', 'v' } },
         { '<leader>r', group = 'Rename' },
         { '<leader>s', group = 'Search' },
+        { '<leader>S', group = 'Session' },
         { '<leader>w', group = 'Windows' },
         { '<leader>wt', group = 'Windows Tab' },
         { '<leader>p', group = 'Database Persistent' },

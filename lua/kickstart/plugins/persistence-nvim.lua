@@ -4,4 +4,11 @@ return {
   opts = {
     -- add any custom options here
   },
+  keys = {
+    '<leader>Sl',
+    desc = 'Load Current Dir Session',
+    function()
+      require('persistence').load()
+    end,
+  },
 }
