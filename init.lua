@@ -140,10 +140,10 @@ vim.keymap.set('n', '<leader>w<', '15<C-w><', { desc = 'Smaller window horizonta
 vim.keymap.set('n', '<leader>w_', '<C-w>_', { desc = 'Maximize window' })
 
 -- Move windows around
-vim.keymap.set('n', '<leader>wH', '<C-w><C-H>', { desc = 'Move window to left' })
-vim.keymap.set('n', '<leader>wL', '<C-w><C-L>', { desc = 'Move window to right' })
-vim.keymap.set('n', '<leader>wJ', '<C-w><C-J>', { desc = 'Move window to lower' })
-vim.keymap.set('n', '<leader>wK', '<C-w><C-K>', { desc = 'Move window to upper' })
+vim.keymap.set('n', '<leader>wH', '<C-w>H', { desc = 'Move window to left' })
+vim.keymap.set('n', '<leader>wL', '<C-w>L', { desc = 'Move window to right' })
+vim.keymap.set('n', '<leader>wJ', '<C-w>J', { desc = 'Move window to lower' })
+vim.keymap.set('n', '<leader>wK', '<C-w>K', { desc = 'Move window to upper' })
 
 -- Window tab
 vim.keymap.set('n', '<leader>wtn', ':tabe<CR>', { desc = 'New tab' })
