@@ -123,6 +123,12 @@ vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = 'Move focus to the righ
 vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Move windows around
+vim.keymap.set('n', '<leader>wH', '<C-w><C-H>', { desc = 'Move window to left' })
+vim.keymap.set('n', '<leader>wL', '<C-w><C-L>', { desc = 'Move window to right' })
+vim.keymap.set('n', '<leader>wJ', '<C-w><C-J>', { desc = 'Move window to lower' })
+vim.keymap.set('n', '<leader>wK', '<C-w><C-K>', { desc = 'Move window to upper' })
+
 vim.keymap.set('n', '<leader>ww', '<C-w>w', { desc = 'Cycle thru window' })
 
 -- Split windows with <leader>
