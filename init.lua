@@ -516,6 +516,25 @@ require('lazy').setup({
           --  Useful when your language has ways of declaring types without an actual implementation.
           map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
+          -- Jump to next function or method
+          map(
+            ']f',
+            require('telescope.builtin').lsp_document_symbols {
+              symbols = { 'function', 'method' },
+              jump_type = 'next',
+            },
+            'Next function'
+          )
+          -- Jump to previous function or method
+          map(
+            ']f',
+            require('telescope.builtin').lsp_document_symbols {
+              symbols = { 'function', 'method' },
+              jump_type = 'prev',
+            },
+            'Previous function'
+          )
+
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
           --  the definition of its *type*, not where it was *defined*.
@@ -956,32 +975,6 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ['af'] = '@function.outer',
-            ['if'] = '@function.inner',
-          },
-        },
-        move = {
-          enable = true,
-          set_jumps = true,
-          goto_next_start = {
-            [']m'] = '@function.outer',
-          },
-          goto_next_end = {
-            [']M'] = '@function.outer',
-          },
-          goto_previous_start = {
-            ['[m'] = '@function.outer',
-          },
-          goto_previous_end = {
-            ['[M'] = '@function.outer',
-          },
-        },
-      },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
