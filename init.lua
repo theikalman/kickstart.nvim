@@ -965,31 +965,6 @@ require('lazy').setup({
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
   {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    setup = function()
-      require('nvim-treesitter.configs').setup {
-        textobjects = {
-          move = {
-            enable = true,
-            set_jumps = true, -- Enables jump list tracking
-            goto_next_start = {
-              [']f'] = '@function.outer', -- Jump to next function start
-            },
-            goto_next_end = {
-              [']F'] = '@function.outer', -- Jump to next function end
-            },
-            goto_previous_start = {
-              ['[f'] = '@function.outer', -- Jump to previous function start
-            },
-            goto_previous_end = {
-              ['[F'] = '@function.outer', -- Jump to previous function end
-            },
-          },
-        },
-      }
-    end,
-  },
-  {
     -- A Neovim plugin for setting the commentstring option based on the cursor location in the file.
     -- The location is checked via treesitter queries. THIS PLUGIN REQUIRE TREESITTER ABOVE.
     'JoosepAlviste/nvim-ts-context-commentstring',
