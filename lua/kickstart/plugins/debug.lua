@@ -154,5 +154,21 @@ return {
 
     -- Install python specific config
     require('dap-python').setup 'python'
+
+    -- Launch configuration
+    dap.configurations.python = {
+      {
+        type = 'python',
+        request = 'launch',
+        name = 'Launch file',
+        program = '${file}',
+        pythonPath = function()
+          local python_path = vim.fn.system 'which python' -- For Unix-like systems
+          -- local python_path = vim.fn.system("where python")  -- For Windows systems
+          python_path = python_path:gsub('%s+', '') -- Trim whitespace
+          return python_path
+        end,
+      },
+    }
   end,
 }
