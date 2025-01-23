@@ -45,22 +45,23 @@ return {
 
 			-- Create autocommand which carries out the actual linting
 			-- on the specified events.
-			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-				group = lint_augroup,
-				callback = function()
-					-- Only run the linter in buffers that you can modify in order to
-					-- avoid superfluous noise, notably within the handy LSP pop-ups that
-					-- describe the hovered symbol using Markdown.
-					if vim.opt_local.modifiable:get() then
-						lint.try_lint()
-					end
-				end,
-			})
+			-- local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+			-- vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+			-- 	group = lint_augroup,
+			-- 	callback = function()
+			-- 		-- Only run the linter in buffers that you can modify in order to
+			-- 		-- avoid superfluous noise, notably within the handy LSP pop-ups that
+			-- 		-- describe the hovered symbol using Markdown.
+			-- 		if vim.opt_local.modifiable:get() then
+			-- 			lint.try_lint()
+			-- 		end
+			-- 	end,
+			-- })
 
 			-- Use spaces for indentation for certain file type instead of tab
-			vim.api.nvim_create_autocmd("FileType", {
+			vim.api.nvim_create_autocmd({ "FileType" }, {
 				pattern = { "python", "lua", "css" }, -- Replace with the desired filetype
+				group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
 				callback = function()
 					vim.bo.expandtab = true -- Use spaces instead of tabs
 					-- vim.bo.tabstop = 4 -- Number of spaces per tab
