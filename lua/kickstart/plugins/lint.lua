@@ -57,17 +57,6 @@ return {
 			-- 		end
 			-- 	end,
 			-- })
-
-			-- Use spaces for indentation for certain file type instead of tab
-			vim.api.nvim_create_autocmd({ "FileType" }, {
-				pattern = { "python", "lua", "css" }, -- Replace with the desired filetype
-				group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
-				callback = function()
-					vim.bo.expandtab = true -- Use spaces instead of tabs
-					-- vim.bo.tabstop = 4 -- Number of spaces per tab
-					-- vim.bo.shiftwidth = 4 -- Number of spaces for auto-indentation
-				end,
-			})
 		end,
 	},
 }
