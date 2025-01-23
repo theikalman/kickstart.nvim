@@ -702,7 +702,7 @@ require("lazy").setup({
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
+		event = {}, -- "BufWritePre"
 		cmd = { "ConformInfo" },
 		keys = {
 			{
@@ -711,7 +711,7 @@ require("lazy").setup({
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
 				mode = "",
-				desc = "[C]ode [F]ormat buffer",
+				desc = "Code format buffer",
 			},
 		},
 		opts = {
