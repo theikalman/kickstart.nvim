@@ -55,12 +55,15 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Use space instead of tab for certain files
+-- Set indentation to use spaces by default instead of actual tab
+vim.bo.expandtab = true
+
+-- Use actual tab instead of space for indentation
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "python", "lua", "css" }, -- Replace with the desired filetype
-	group = vim.api.nvim_create_augroup("space-for-tab", { clear = true }),
+	pattern = { "go" }, -- Replace with the desired filetype
+	group = vim.api.nvim_create_augroup("tab-for-indent", { clear = true }),
 	callback = function()
-		vim.bo.expandtab = true -- Use spaces instead of tabs
+		vim.bo.expandtab = false -- Use actual tab instead of space
 		-- vim.bo.tabstop = 4 -- Number of spaces per tab
 		-- vim.bo.shiftwidth = 4 -- Number of spaces for auto-indentation
 	end,
@@ -549,8 +552,6 @@ require("lazy").setup({
 					-- or a suggestion from your LSP for this to activate.
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 
-					-- WARN: This is not Goto Definition, this is Goto Declaration.
-					--  For example, in C this would take you to the header.
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 					-- The following two autocommands are used to highlight references of the
