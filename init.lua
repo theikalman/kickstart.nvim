@@ -723,6 +723,8 @@ require("lazy").setup({
             'rafamadriz/friendly-snippets',
             config = function()
               require('luasnip.loaders.from_vscode').lazy_load()
+              -- This is to load custom snippet with vscode-style snippet format
+              -- require("luasnip.loaders.from_vscode").load({ paths = { "./my-snippets" } })
             end,
           },
         },
