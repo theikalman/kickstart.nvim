@@ -406,7 +406,6 @@ require("lazy").setup({
       -- See `:help telescope.builtin`
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "Search buffer" })
-      vim.keymap.set("n", "<leader>sb", builtin.m, { desc = "Search buffer" })
       vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Search help" })
       vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "Search keymaps" })
       vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Search files" })
