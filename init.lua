@@ -88,11 +88,6 @@ vim.opt.scrolloff = 3
 -- Turn off line wrapping
 vim.wo.wrap = false
 
--- Set fold method to use treesitter
--- ref: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#folding
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
