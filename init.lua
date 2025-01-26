@@ -55,6 +55,7 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.tabstop = 4
 -- Set indentation to use spaces by default instead of actual tab
 vim.bo.expandtab = true
 
@@ -87,8 +88,10 @@ vim.opt.scrolloff = 3
 -- Turn off line wrapping
 vim.wo.wrap = false
 
--- Set tabstop to use spaces instead of tab
-vim.opt.tabstop = 4
+-- Set fold method to use treesitter
+-- ref: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#folding
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
