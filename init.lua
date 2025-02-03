@@ -204,7 +204,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Add folding method for supported language
-vim.api.nvim_create_autocmd({ "FileType" }, {
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "Set fold method for supported language by treesitter",
+  group = vim.api.nvim_create_augroup("kickstart-fold-method", { clear = true }),
   callback = function()
 
     -- check if treesitter has parser 
