@@ -650,6 +650,8 @@ require("lazy").setup({
         -- checking
         pylsp = {
           plugins = {
+            -- configuration is set at ~/.config/pycodestyle instead, here it is not working!!!
+            -- ref: https://pycodestyle.pycqa.org/en/latest/intro.html#configuration
             pycodestyle = {
               ignore = {'W391', 'E501'},
               maxLineLength = 100
