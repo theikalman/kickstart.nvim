@@ -631,20 +631,30 @@ require("lazy").setup({
         clangd = {},
         gopls = {},
         zls = {},
-        pyright = {
-          settings = {
-            pyright = {
-              autoImportCompletion = true,
-            },
-            python = {
-              analysis = {
-                diagnosticMode = "openFilesOnly",
-                typeCheckingMode = "off",
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-              },
-            },
-          },
+        -- pyright = {
+        --   settings = {
+        --     pyright = {
+        --       autoImportCompletion = true,
+        --     },
+        --     python = {
+        --       analysis = {
+        --         diagnosticMode = "openFilesOnly",
+        --         typeCheckingMode = "off",
+        --         autoSearchPaths = true,
+        --         useLibraryCodeForTypes = true,
+        --       },
+        --     },
+        --   },
+        -- },
+        -- use pylsp because pyright has no pep8 validation built-in, only act as type
+        -- checking
+        pylsp = {
+          plugins = {
+            pycodestyle = {
+              ignore = {'W391'},
+              maxLineLength = 100
+            }
+          }
         },
         -- phpactor = {}, -- this only available for php ^8.0
         intelephense = {}, -- for php ^7.0
