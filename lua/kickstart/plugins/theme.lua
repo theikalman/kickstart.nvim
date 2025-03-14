@@ -1,11 +1,10 @@
--- lua/plugins/rose-pine.lua
-return {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-        vim.cmd("colorscheme rose-pine")
-    end
-}
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   config = function()
+--     vim.cmd("colorscheme rose-pine")
+--   end
+-- }
 
   -- return { -- You can easily change to a different colorscheme.
   --   -- Change the name of the colorscheme plugin below, and then
@@ -25,22 +24,22 @@ return {
   --   -- end,
   -- },
 
-  -- return {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000,
-  --   init = function()
-  --     -- valid values are: catppuccin-latte catppuccin-frappe catppuccin-macchiato catppuccin-mocha
-  --     vim.cmd.colorscheme("catppuccin-macchiato")
-  --     vim.cmd.hi("Comment gui=none")
-  --   end,
-  --   config = function()
-  --     local catpuccin = require("catppuccin")
-  --     catpuccin.setup({
-  --       background = {
-  --         light = "latte",
-  --         dark = "macchiato",
-  --       },
-  --     })
-  --   end,
-  -- },
+return {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  init = function()
+    -- valid values are: catppuccin-latte catppuccin-frappe catppuccin-macchiato catppuccin-mocha
+    vim.cmd.colorscheme("catppuccin-macchiato")
+    vim.cmd.hi("Comment gui=none")
+  end,
+  config = function()
+    local catpuccin = require("catppuccin")
+    catpuccin.setup({
+      background = {
+        light = "latte",
+        dark = "macchiato",
+      },
+    })
+  end,
+}
