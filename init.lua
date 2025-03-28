@@ -940,7 +940,6 @@ require("lazy").setup({
   require("kickstart.plugins.vim-dadbod-ui"),
   require("kickstart.plugins.persistence-nvim"),
   require("kickstart.plugins.flash-nvim"),
-  require("kickstart.plugins.rest-nvim"),
   require("kickstart.plugins.vim-illuminate"),
   require("kickstart.plugins.theme"),
 
