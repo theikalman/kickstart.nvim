@@ -22,6 +22,6 @@ return {
     vim.g.db_ui_use_nerd_fonts = 1
     -- vim.g.db_ui_save_location = '~/Dropbox/dev/nvim/dadbod_db_ui_queries'
     -- on MacOS, we need specific location for DropBox
-    vim.g.db_ui_save_location = '/Users/ajiyakin/Library/CloudStorage/Dropbox'
+    vim.g.db_ui_save_location = '/Users/ajiyakin/Library/CloudStorage/Dropbox/dev/nvim/dadbod_db_ui_queries'
   end,
 }
