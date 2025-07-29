@@ -40,6 +40,7 @@ return {
         light = "latte",
         dark = "macchiato",
       },
+      transparent_background = false,
     })
   end,
 }
