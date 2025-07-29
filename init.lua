@@ -631,6 +631,7 @@ require("lazy").setup({
         clangd = {},
         gopls = {},
         zls = {},
+        -- pythonn lsp
         pyright = {
           settings = {
             pyright = {
