@@ -43,8 +43,20 @@ return {
       transparent_background = true,
       dim_inactive = {
         enabled = true,
-        shade = "dark",
+        shade = "light",
         percentage = 0.15,
+      },
+      integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        mini = {
+          enabled = true,
+          indentscope_color = "",
+        },
+        dap = true,
+        dap_ui = true,
       },
     })
   end,
