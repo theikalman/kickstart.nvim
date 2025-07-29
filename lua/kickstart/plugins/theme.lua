@@ -41,11 +41,6 @@ return {
         dark = "macchiato",
       },
       transparent_background = true,
-      dim_inactive = {
-        enabled = true,
-        shade = "light",
-        percentage = 0.15,
-      },
       integrations = {
         cmp = true,
         gitsigns = true,
