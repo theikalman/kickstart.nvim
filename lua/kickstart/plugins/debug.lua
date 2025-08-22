@@ -22,6 +22,19 @@ return {
     -- Add debugger protocol here
     'leoluz/nvim-dap-go',
     'mfussenegger/nvim-dap-python',
+
+    -- local llm for code assistant
+    {
+      "TabbyML/vim-tabby",
+      lazy = false,
+      dependencies = {
+        "neovim/nvim-lspconfig",
+      },
+      init = function()
+        vim.g.tabby_agent_start_command = {"npx", "tabby-agent", "--stdio"}
+        vim.g.tabby_inline_completion_trigger = "auto"
+      end,
+    },
   },
   keys = {
     {
