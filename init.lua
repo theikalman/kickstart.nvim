@@ -186,6 +186,7 @@ end, { desc = "Delete all buffers except me" })
 -- File operations
 vim.keymap.set("n", "<leader>fs", ":w<CR>", { desc = "File save current buffer" })
 vim.keymap.set("n", "<leader>fS", ":wa<CR>", { desc = "File save all buffer" })
+vim.keymap.set("n", "<leader>fc", ":let @+=expand('%:p')<CR>", { desc = "Copy absolute path" })
 
 vim.keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Lazyvim Open" })
 
