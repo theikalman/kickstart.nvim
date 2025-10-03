@@ -62,6 +62,12 @@ vim.opt.tabstop = 4
 -- Set indentation to use spaces by default instead of actual tab
 vim.bo.expandtab = true
 
+-- Check if conda is active and set Python host accordingly
+local conda_prefix = os.getenv("CONDA_PREFIX")
+if conda_prefix ~= nil then
+  vim.g.python3_host_prog = conda_prefix .. "/bin/python"
+end
+
 -- Use actual tab instead of space for indentation
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "go" }, -- Replace with the desired filetype
