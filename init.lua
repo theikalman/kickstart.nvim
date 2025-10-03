@@ -632,22 +632,22 @@ require("lazy").setup({
         clangd = {},
         gopls = {},
         zls = {},
-        -- pythonn lsp
-        pyright = {
-          settings = {
-            pyright = {
-              autoImportCompletion = true,
-            },
-            python = {
-              analysis = {
-                diagnosticMode = "openFilesOnly",
-                typeCheckingMode = "off",
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-              },
-            },
-          },
-        },
+        -- -- pythonn lsp
+        -- pyright = {
+        --   settings = {
+        --     pyright = {
+        --       autoImportCompletion = true,
+        --     },
+        --     python = {
+        --       analysis = {
+        --         diagnosticMode = "openFilesOnly",
+        --         typeCheckingMode = "off",
+        --         autoSearchPaths = true,
+        --         useLibraryCodeForTypes = true,
+        --       },
+        --     },
+        --   },
+        -- },
         -- use pylsp because pyright has no pep8 validation built-in, only act as type
         -- checking
         pylsp = {
