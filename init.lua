@@ -652,13 +652,12 @@ require("lazy").setup({
         -- checking
         pylsp = {
           plugins = {
-            -- configuration is set at ~/.config/pycodestyle instead, here it is not working!!!
-            -- ref: https://pycodestyle.pycqa.org/en/latest/intro.html#configuration
+            configurationSources = { "flake8" },
+            -- using flake8 instead of pycodestyle
             pycodestyle = {
-              ignore = {'W391', 'E501'},
-              maxLineLength = 100
-            }
-          }
+                enabled = false
+            },
+          },
         },
         -- phpactor = {}, -- this only available for php ^8.0
         intelephense = {}, -- for php ^7.0
