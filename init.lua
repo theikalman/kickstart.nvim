@@ -638,6 +638,9 @@ require("lazy").setup({
         clangd = {},
         gopls = {},
         zls = {},
+        --
+        -- INSTALL PYLSP FROM WITHIN VIRTUAL ENVIRONMENT instead of HERE!!!
+        --
         -- -- pythonn lsp
         -- pyright = {
         --   settings = {
@@ -654,17 +657,16 @@ require("lazy").setup({
         --     },
         --   },
         -- },
-        -- use pylsp because pyright has no pep8 validation built-in, only act as type
-        -- checking
-        pylsp = {
-          plugins = {
-            configurationSources = { "flake8" },
-            -- using flake8 instead of pycodestyle
-            pycodestyle = {
-                enabled = false
-            },
-          },
-        },
+        -- -- use pylsp because pyright has no pep8 validation built-in, only act as type
+        -- -- checking
+        -- pylsp = {
+        --   cmd = { os.getenv("CONDA_PREFIX") .. "/bin/pylsp" },
+        --   plugins = {
+        --     configurationSources = { "flake8" },
+        --     -- using flake8 instead of pycodestyle
+        --     pycodestyle = { enabled = false },
+        --   },
+        -- },
         -- phpactor = {}, -- this only available for php ^8.0
         intelephense = {}, -- for php ^7.0
         rust_analyzer = {},
