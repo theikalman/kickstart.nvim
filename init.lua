@@ -660,6 +660,7 @@ require("lazy").setup({
         -- use pylsp because pyright has no pep8 validation built-in, only act as type
         -- checking
         pylsp = {
+          cmd = { "python", "-m", "pylsp" },
           plugins = {
             configurationSources = { "flake8" },
             -- using flake8 instead of pycodestyle
