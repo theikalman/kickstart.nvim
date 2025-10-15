@@ -950,7 +950,8 @@ require("lazy").setup({
   require("kickstart.plugins.persistence-nvim"),
   require("kickstart.plugins.flash-nvim"),
   require("kickstart.plugins.vim-illuminate"),
-  require("kickstart.plugins.theme"),
+  -- require("kickstart.plugins.theme"),
+  require("kickstart.plugins.yakintheme"),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
