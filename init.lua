@@ -745,9 +745,14 @@ require("lazy").setup({
     },
     opts = {
       notify_on_error = false,
-      -- Prefer to not format on save, this will causes to
-      -- format all lines instead of the edited one only.
-      format_on_save = false,
+      -- Format on save only for Go files
+      format_on_save = function(bufnr)
+        -- Only format on save for Go files
+        if vim.bo[bufnr].filetype == 'go' then
+          return { timeout_ms = 500, lsp_format = "fallback" }
+        end
+        return false
+      end,
       format_after_save = false,
       default_format_opts = { lsp_format = "fallback" },
       formatters_by_ft = {
@@ -758,6 +763,7 @@ require("lazy").setup({
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
         json = { 'jq' },
+        go = { 'goimports', 'gofmt' },
       },
     },
   },
