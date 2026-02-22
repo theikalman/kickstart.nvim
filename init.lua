@@ -959,6 +959,7 @@ require("lazy").setup({
   require("kickstart.plugins.vim-illuminate"),
   require("kickstart.plugins.theme.catpuccin"),
   require("kickstart.plugins.autocomplete-supermaven"),
+  require("kickstart.plugins.opencode-nvim"),
   -- require("kickstart.plugins.yakintheme"),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
