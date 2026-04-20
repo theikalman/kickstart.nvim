@@ -401,6 +401,9 @@ require("lazy").setup({
             "node_modules",
             "vendor",
           },
+          preview = {
+            treesitter = false,
+          },
           -- mappings = {
           --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
           -- },
