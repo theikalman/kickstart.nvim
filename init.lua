@@ -402,6 +402,8 @@ require("lazy").setup({
             "vendor",
           },
           preview = {
+            -- NOTE: Temporarily disable treesitter for telescope as it causes
+            -- intermittent errors. We can re-enable it once we figure out.
             treesitter = false,
           },
           -- mappings = {
